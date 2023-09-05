@@ -1,8 +1,13 @@
 const express = require('express');
 const app = express();
 
-
 app.get('/', (req, res) => {
+    res.sendFile('./static/index.html', {
+        root: __dirname
+    });
+});
+
+app.get('/formulario', (req, res) => {
     res.sendFile('./static/formulario.html', {
         root: __dirname
     });
